@@ -1,0 +1,14 @@
+<template name="tasks">
+	<h1>{{ activeList.name }}</h1>
+	<i class="icon-trashcan"></i>
+	<label class="task">
+		<i class="icon-plus"></i>
+		<input type="text" placeholder="Add new task">
+	</label>
+	{{#each tasks}}
+		<label class="task">
+			<input type="checkbox" {{ isChecked }}>
+			<span>{{ name }}</span>
+		</label>
+	{{/each}}
+</template>

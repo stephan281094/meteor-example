@@ -1,0 +1,22 @@
+.loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: #00cdaa;
+	margin-left: -20px;
+	margin-top: -20px;
+
+	-webkit-animation: loading .5s infinite;
+	animation: loading .5s infinite;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(90deg);
+	}
+}

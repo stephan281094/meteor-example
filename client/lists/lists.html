@@ -1,0 +1,12 @@
+<template name="lists">
+	<label class="list-item">
+		<i class="icon-plus"></i>
+		<input type="text" placeholder="Add list">
+	</label>
+	{{ #each lists }}
+		<a href="/{{ _id }}" class="list-item {{ isActive }} {{ isDone }}">
+			<i class="icon-list-unordered"></i> {{ name }}
+			<i>{{ qtyTasks }}</i>
+		</a>
+	{{ /each }}
+</template>

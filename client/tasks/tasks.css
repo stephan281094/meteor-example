@@ -1,0 +1,129 @@
+section {
+	position: relative;
+	width: 70%;
+	height: 100%;
+	padding: 30px;
+	background-color: #fff;
+	overflow: scroll;
+	float: left;
+	border-left: 1px solid #f2f2f2;
+}
+
+section h1 {
+	position: relative;
+	float: left;
+	margin: 0;
+}
+
+
+section > .task {
+	position: relative;
+	width: 100%;
+	margin: 15px 0;
+	line-height: 30px;
+	font-size: 14pt;
+	display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	vertical-align: middle;
+
+	-webkit-animation-duration: .4s;
+	animation-duration: .4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: grow;
+	animation-name: grow;
+}
+
+section > .task input[type="checkbox"] {
+	opacity: 0;
+	z-index: 1;
+	cursor: pointer;
+	float: left;
+}
+
+section > .task input[type="checkbox"], section > .task input[type="checkbox"] + span:before {
+	margin: 0;
+	width: 30px;
+	height: 30px;
+}
+
+section > .task input[type="checkbox"] + span:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+
+	transition: .2s;
+}
+
+section > .task:active span:before {
+	-webkit-transform: scale(1.2);
+}
+
+section > .task input[type="checkbox"]:checked + span:before {
+	left: 10px;
+	width: 10px;
+	height: 20px;
+	border: 2px solid #0f9d58;  
+	border-top: 0;
+	border-left: 0;
+	-webkit-transform: rotate(40deg);
+	box-shadow: inset 0 0 0 1px transparent;
+}
+
+section > .task span {
+	height: 30px;
+	margin-left: 30px;
+	float: left;
+	cursor: pointer;
+}
+
+section .task i {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0;
+	margin-right: 30px;
+	float: left;
+	color: #555;
+}
+
+section .task input[type="text"] {
+	position: relative;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	z-index: 1;
+	font-size: 14pt;
+	line-height: 30px;
+	background-color: transparent;
+	float: left;
+	font-weight: 100;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+section i.icon-trashcan {
+	color: #888;
+	font-size: 16pt;
+	float: right;
+	cursor: pointer;
+
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	-webkit-font-smoothing: subpixel-antialiased;
+	transition: -webkit-transform .5s;
+}
+
+section i.icon-trashcan:hover {
+	-webkit-transform: scale(1.2);
+}

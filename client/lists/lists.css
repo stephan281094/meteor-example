@@ -1,0 +1,118 @@
+aside {
+	position: relative;
+	padding: 0;
+	padding-top: 80px;
+	margin: 0;
+	width: 30%;
+	height: 100%;
+	background-color: #fff;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	float: left;
+	-webkit-perspective: 1000;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+aside .list-item {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	padding-left: 80px;
+	color: #555;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	overflow: hidden;
+
+	transition: -webkit-transform .2s;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-animation: grow-list-item .4s;
+	animation: grow-list-item .4s;
+}
+
+@-webkit-keyframes grow-list-item {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 80px;
+	}
+}
+
+aside .list-item:first-child {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	cursor: text;
+}
+
+aside .list-item i:first-of-type:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	font-weight: 100;
+	line-height: 80px;
+	color: #666;
+}
+
+aside .list-item i:nth-of-type(2) {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 80px;
+	width: 80px;
+	text-align: center;
+	font-weight: 100;
+	line-height: 80px;
+	color: #666;
+
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 20%, #fff);
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 20%, #fff);
+	background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 20%, #fff);
+	background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 20%, #fff);
+}
+
+aside .list-item:not(:first-child):hover {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.05);
+}
+
+aside .list-item.active {
+	font-weight: 800;
+	color: #000;
+}
+
+aside .list-item.disabled {
+	padding: 0;
+	text-align: center;
+	cursor: default;
+}
+
+aside .list-item input[type="text"] {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 12pt;
+	border: 0;
+	outline: 0;
+}
