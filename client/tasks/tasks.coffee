@@ -27,7 +27,7 @@ if Meteor.isClient
 
 		'change input[type=checkbox]': (event, template) ->
 			isChecked = event.target.checked
-			Tasks.update(@_id, {$set: {isChecked: isChecked}});
+			Tasks.update(@_id, {$set: {isChecked: isChecked}})
 
 		'click i.icon-trashcan': (event, template) ->
 			if confirm("You sure?")

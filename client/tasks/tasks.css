@@ -1,20 +1,8 @@
-section {
-	position: relative;
-	width: 70%;
-	height: 100%;
-	padding: 30px;
-	background-color: #fff;
-	overflow: scroll;
-	float: left;
-	border-left: 1px solid #f2f2f2;
-}
-
 section h1 {
 	position: relative;
 	float: left;
 	margin: 0;
 }
-
 
 section > .task {
 	position: relative;
@@ -27,13 +15,10 @@ section > .task {
 	-moz-user-select: none;
 	user-select: none;
 	vertical-align: middle;
+}
 
-	-webkit-animation-duration: .4s;
-	animation-duration: .4s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	-webkit-animation-name: grow;
-	animation-name: grow;
+section > .task:first-of-type {
+	margin-top: 0;
 }
 
 section > .task input[type="checkbox"] {
@@ -58,10 +43,6 @@ section > .task input[type="checkbox"] + span:before {
 	border: 1px solid #ccc;
 
 	transition: .2s;
-}
-
-section > .task:active span:before {
-	-webkit-transform: scale(1.2);
 }
 
 section > .task input[type="checkbox"]:checked + span:before {
@@ -113,17 +94,28 @@ section .task input[type="text"] {
 }
 
 section i.icon-trashcan {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
 	color: #888;
-	font-size: 16pt;
+	font-size: 16px;
 	float: right;
 	cursor: pointer;
-
-	backface-visibility: hidden;
-	transform: translateZ(0);
-	-webkit-font-smoothing: subpixel-antialiased;
-	transition: -webkit-transform .5s;
+	z-index: 2;
 }
 
-section i.icon-trashcan:hover {
-	-webkit-transform: scale(1.2);
+i.icon-three-bars {
+	display: none;
+	cursor: pointer;
+	z-index: 3;
+}
+
+@media (max-width: 900px) {
+	i.icon-three-bars {
+		display: block;
+	}
 }
