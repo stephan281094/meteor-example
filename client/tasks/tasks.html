@@ -1,17 +1,20 @@
 <template name="tasks">
 	<i class="icon-trashcan"></i>
-	<div class="task">
-		<i class="icon-three-bars"></i>
-		<h1>{{ activeList.name }}</h1>
-	</div>
-	<label class="task">
-		<i class="icon-plus"></i>
-		<input type="text" placeholder="Add new task">
-	</label>
-	{{#each tasks}}
-		<label class="task">
-			<input type="checkbox" {{ isChecked }}>
-			<span>{{ name }}</span>
-		</label>
-	{{/each}}
+
+	<ul>
+		<li class="task">
+			<i class="icon-three-bars"></i>
+			<h1>{{ activeList.name }}</h1>
+		</li>
+		<li class="task">
+			<i class="icon-plus"></i>
+			<input type="text" placeholder="Add new task">
+		</li>
+		{{#each tasks}}
+			<li class="task">
+				<input type="checkbox" {{ isChecked }}>
+				<span>{{ name }}</span>
+			</li>
+		{{/each}}
+	</ul>
 </template>

@@ -5,7 +5,7 @@ if Meteor.isClient
 			event.stopPropagation()
 			
 		'click section': (event, template) ->
-
+			event.stopPropagation()
 			if $('aside').hasClass 'open'
 				$('aside').removeClass 'open'
 

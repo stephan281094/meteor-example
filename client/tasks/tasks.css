@@ -4,7 +4,7 @@ section h1 {
 	margin: 0;
 }
 
-section > .task {
+section li {
 	position: relative;
 	width: 100%;
 	margin: 15px 0;
@@ -17,35 +17,36 @@ section > .task {
 	vertical-align: middle;
 }
 
-section > .task:first-of-type {
+section li:first-of-type {
 	margin-top: 0;
 }
 
-section > .task input[type="checkbox"] {
+section li input[type="checkbox"] {
 	opacity: 0;
-	z-index: 1;
 	cursor: pointer;
 	float: left;
+	z-index: 2;
 }
 
-section > .task input[type="checkbox"], section > .task input[type="checkbox"] + span:before {
+section li input[type="checkbox"], section li input[type="checkbox"] + span:before {
 	margin: 0;
 	width: 30px;
 	height: 30px;
 }
 
-section > .task input[type="checkbox"] + span:before {
+section li input[type="checkbox"] + span:before {
 	content: "";
 	position: absolute;
 	left: 0;
 	top: 0;
 	background-color: #fff;
 	border: 1px solid #ccc;
+	z-index: 1;
 
 	transition: .2s;
 }
 
-section > .task input[type="checkbox"]:checked + span:before {
+section li input[type="checkbox"]:checked + span:before {
 	left: 10px;
 	width: 10px;
 	height: 20px;
@@ -56,14 +57,14 @@ section > .task input[type="checkbox"]:checked + span:before {
 	box-shadow: inset 0 0 0 1px transparent;
 }
 
-section > .task span {
+section li span {
 	height: 30px;
 	margin-left: 30px;
 	float: left;
 	cursor: pointer;
 }
 
-section .task i {
+section li i {
 	position: relative;
 	width: 30px;
 	height: 30px;
@@ -75,7 +76,7 @@ section .task i {
 	color: #555;
 }
 
-section .task input[type="text"] {
+section li input[type="text"] {
 	position: relative;
 	height: 30px;
 	margin: 0;
@@ -105,13 +106,14 @@ section i.icon-trashcan {
 	font-size: 16px;
 	float: right;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 1;
 }
 
 i.icon-three-bars {
+	line-height: 30px;
 	display: none;
 	cursor: pointer;
-	z-index: 3;
+	z-index: 1;
 }
 
 @media (max-width: 900px) {

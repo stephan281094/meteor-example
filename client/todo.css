@@ -45,7 +45,6 @@ aside {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	float: left;
-	transition: -webkit-transform .4s;
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -66,6 +65,19 @@ section {
 @media (max-width: 900px) {
 	section {
 		width: 100%;
+		
+		transition: background-color .4s, -webkit-transform .4s;
+	}
+
+	section:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: transparent;
+
 		transition: background-color .4s;
 	}
 
@@ -74,16 +86,22 @@ section {
 		width: 75%;
 		left: 0;
 		top: 0;
+		z-index: 1;
+
 		-webkit-transform: translate(-100%, 0);
-		z-index: 5;
 	}
 
 	aside.open {
 		-webkit-transform: translate(0);
+		opacity: 0.98;
 	}
 
 	aside.open + section {
-		background: rgba(0, 0, 0, .5);
+		-webkit-transform: scale(0.95);
+	}
+
+	aside.open + section:after {
+		background-color: rgba(0, 0, 0, .2);
 	}
 }
 
