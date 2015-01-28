@@ -46,6 +46,8 @@ aside {
 	overflow-x: hidden;
 	float: left;
 
+	transition: none;
+
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
@@ -60,11 +62,13 @@ section {
 	overflow: scroll;
 	float: left;
 	border-left: 1px solid #f2f2f2;
+	z-index: 1;
 }
 
 @media (max-width: 900px) {
 	section {
 		width: 100%;
+		z-index: 0;
 		
 		transition: background-color .4s, -webkit-transform .4s;
 	}
@@ -87,6 +91,7 @@ section {
 		left: 0;
 		top: 0;
 		z-index: 1;
+		transition: .4s;
 
 		-webkit-transform: translate(-100%, 0);
 	}
@@ -97,6 +102,7 @@ section {
 	}
 
 	aside.open + section {
+		cursor: pointer;
 		-webkit-transform: scale(0.95);
 	}
 
