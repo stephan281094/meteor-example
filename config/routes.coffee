@@ -8,3 +8,4 @@ Router.route '/', ->
 Router.route '/:_id', ->
 	Session.set '_id', @params._id
 	@render 'main'
+	$('aside').removeClass('open');

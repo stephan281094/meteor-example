@@ -1,8 +1,8 @@
 if Meteor.isClient
 	Template.main.events
 		'click i.icon-three-bars': (event, template) ->
-			toggleMenu()
 			event.stopPropagation()
+			toggleMenu()
 			
 		'click section': (event, template) ->
 			event.stopPropagation()

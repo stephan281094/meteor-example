@@ -2,18 +2,20 @@
 	<i class="icon-trashcan"></i>
 
 	<ul>
-		<li class="task">
+		<li>
 			<i class="icon-three-bars"></i>
 			<h1>{{ activeList.name }}</h1>
 		</li>
-		<li class="task">
+		<li>
 			<i class="icon-plus"></i>
 			<input type="text" placeholder="Add new task">
 		</li>
 		{{#each tasks}}
-			<li class="task">
-				<input type="checkbox" {{ isChecked }}>
-				<span>{{ name }}</span>
+			<li>
+				<label>
+					<input type="checkbox" {{ isChecked }}>
+					<span>{{ name }}</span>
+				</label>
 			</li>
 		{{/each}}
 	</ul>

@@ -31,13 +31,8 @@ aside .list-item {
 	}
 }
 
-aside .list-item:first-child {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	background-color: #fff;
-	cursor: text;
+aside .list-item:first-child input {
+	background-color: transparent;
 }
 
 aside .list-item i:first-of-type:before {
