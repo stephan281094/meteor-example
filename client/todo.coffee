@@ -1,13 +1,12 @@
-if Meteor.isClient
-	Template.main.events
-		'click i.icon-three-bars': (event, template) ->
-			event.stopPropagation()
-			toggleMenu()
-			
-		'click section': (event, template) ->
-			event.stopPropagation()
-			if $('aside').hasClass 'open'
-				$('aside').removeClass 'open'
+Template.main.events
+	'click i.icon-three-bars': (event, template) ->
+		event.stopPropagation()
+		toggleMenu()
+
+	'click section': (event, template) ->
+		event.stopPropagation()
+		if $('aside').hasClass 'open'
+			$('aside').removeClass 'open'
 
 
 toggleMenu = (open) ->
