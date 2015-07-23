@@ -5,14 +5,16 @@ Template.main.events
 
 	'click section': (event, template) ->
 		event.stopPropagation()
-		if $('aside').hasClass('open')
-			$('aside').removeClass('open')
+		aside = $('aside')
+
+		if aside.hasClass('open')
+			aside.removeClass('open')
 
 toggleMenu = (open) ->
 	aside = $('aside')
 	open  = aside.hasClass('open') if (not open?)
 
-	if (open is true)
+	if (open)
 		aside.removeClass('open')
 	else
 		aside.addClass('open')
