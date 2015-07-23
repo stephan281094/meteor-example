@@ -8,6 +8,4 @@ meteor-platform
 insecure
 coffeescript
 iron:router
-less
 autopublish
-stevezhu:sass
