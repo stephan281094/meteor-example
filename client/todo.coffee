@@ -1,7 +1,7 @@
 Template.main.events
 	'click i.icon-three-bars': (event, template) ->
 		event.stopPropagation()
-		toggleMenu()
+		$('aside').toggleClass('open')
 
 	'click section': (event, template) ->
 		event.stopPropagation()
@@ -11,10 +11,4 @@ Template.main.events
 			aside.removeClass('open')
 
 toggleMenu = (open) ->
-	aside = $('aside')
-	open  = aside.hasClass('open') if (not open?)
-
-	if (open)
-		aside.removeClass('open')
-	else
-		aside.addClass('open')
+	$('aside').toggleClass('open')
