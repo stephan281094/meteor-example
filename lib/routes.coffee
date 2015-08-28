@@ -1,7 +1,7 @@
 Router.route '/', ->
 	firstList = Lists.findOne({}, {
-        sort: {'name': 1}
-    })
+		sort: {'name': 1}
+	})
 
 	if (firstList?)
 		@redirect('/' + firstList._id)
